@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-4-TASK</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">DAY - 4 - TASK</h1>
+
+    <h2 style="text-align: center;">Javascript - Day -4 : What is XMLHTTPRequest?</h2>
+
+    <br>
+
+    <h2>
+        1. How to compare two JSON have the same properties without order?<br>
+        a. let obj1 = { name: "Person 1", age:5};<br>
+        b. let obj2 = { age:5, name: "Person 1" };
+    </h2><br>
+
+    <script>
+
+        console.log("1. Compare two JSON have the same properties without order")
+
+        var obj1 = { name: "Person 1", age: 5 };
+        var obj2 = { age: 5, name: "Person 1" };
+
+
+        if (obj1.length == obj2.length) {
+            console.log(true);
+        }
+
+        else {
+            console.log(false);
+        }
+
+    </script>
+
+    <h2>2. Use the rest countries' API URL -> https://restcountries.com/v3.1/all and display all the country flags in
+        the console.</h2><br>
+
+    <script>
+
+        console.log("\n")
+        console.log("2. Displaying all the country flags")
+        console.log("\n")
+
+        var request = new XMLHttpRequest();
+        //step 02:initiate a request
+        request.open("GET", "https://restcountries.com/v2/all");
+        //step 03 :sending the request
+        request.send();
+        //step 04 : once the data successfully loaded from the server
+        request.onload = function () {
+            var result = JSON.parse(request.response);
+            for (let i = 0; i < result.length; i++) {
+                console.log(result[i].flag);
+            }
+        }
+
+    </script>
+
+    <h2>3. Use the same rest countries and print all countries names, regions, sub-region and populations.</h2><br>
+
+    <script>
+
+        console.log("\n")
+        console.log("3. Displaying all countries names, regions, sub-region and populations")
+        console.log("\n")
+
+        var request = new XMLHttpRequest();
+
+        request.open("GET", "https://restcountries.com/v3.1/all")
+
+        request.send();
+
+        request.onload = function () {
+            var data = JSON.parse(this.responseText);
+            printData(data);
+        }
+
+        function printData(data) {
+            if (data.length > 0) {
+                for (let i = 0; i < data.length; i++) {
+                    const { name = {}, region = '', subregion = '', population = 0 } = data[i];
+                    console.log(name.common, region, subregion, population);
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

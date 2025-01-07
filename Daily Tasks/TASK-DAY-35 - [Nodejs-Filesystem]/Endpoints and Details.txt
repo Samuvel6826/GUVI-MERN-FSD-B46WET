@@ -1,0 +1,29 @@
+Render URL with your endpoints details:
+
+	1) https://task-35-nodejs-filesystem.onrender.com/createTextFile
+
+		
+	Details : 
+		  /createTextFile endpoint is to create text files.
+
+	2) https://task-35-nodejs-filesystem.onrender.com/getTextFiles
+		
+
+	Details : 
+		  /getTextFiles endpoint is to get those created text files.
+
+
+
+
+
+Github repository URL: 
+
+	https://github.com/Samuvel6826/Task-35-Nodejs-Filesystem.git
+
+
+
+
+
+last committed hash ID: 
+
+	bf5d121e04e77203ee8bb951a724f99ccd4d3a11

@@ -1,0 +1,82 @@
+Javascript - Day -2 : Request & Response cycle
+26/03/2023 - Sunday - 11:00 AM : 2:00 PM
+
+Difference between a document and a window objects
+
+The difference between a document and a window is a comparison! You see, Html documents and windows are two different objects in the Html document. These two objects have some similarities and differences.
+
+ 	Both of these objects contain a number of properties, methods, and events. The main difference between these two is that a window object is created by an event handler while a document object is created by the browser itself. A window object has many more methods than a document object because it can perform tasks outside of the webpage itself.
+When it comes to web development, HTML is a language that every developer should be familiar with. It's the backbone of the web and is used to create most of the beautiful websites we see today. That being said, HTML is a complex language with various objects used to create and manipulate web pages.
+
+ 	In this article, we'll be taking a look at the two most important objects in HTML - the Document and Window objects. We'll be exploring the differences between them. So without further ado, let's get started!
+
+What are Document and Window Objects in HTML?
+
+ 	The Document and Window objects are two of the most important objects in HTML. They are essential to the development of web pages and are used to create and manipulate the content on the page. The Document object is used to create and manipulate the HTML elements that make up the page, while the Window object is used to control the browser window and its elements.
+
+ 	The Document object is responsible for everything that is displayed on the web page. It can be used to create elements such as text, images, and links, as well as manipulate their properties. It also has methods for adding event handlers to elements, making it possible to create interactive web pages.
+
+ 	The Window object is responsible for controlling the browser window and its elements. It can be used to open and close windows and resize and move them. It also provides access to the browser's history and location, making it possible to create dynamic web pages.
+
+ 	Let's take a closer look at each of these objects to understand how they work.
+
+Explaining the Document object
+
+ 	The Document object is an essential part of web development and is used to create and manipulate the HTML elements that make up the page. It contains a set of methods and properties that can be used to create and manipulate elements and add event handlers to elements.
+
+ 	The Document object has a number of methods that can be used to create elements. The most commonly used method is the createElement() method, which is used to create an HTML element. Once the element has been created, it can be added to the page with the appendChild() method.
+
+ 	The Document object also has a number of methods for manipulating elements. The setAttribute() method can be used to set the attributes of an element, while the getAttribute() method can be used to get the attributes of an element. The removeChild() method can be used to remove an element from the page, and the replaceChild() method can be used to replace an element with another element.
+
+ 	The Document object also has methods for adding event handlers to elements. The addEventListener() method can be used to add an event handler to an element, while the removeEventListener() method can be used to remove an event handler from an element.
+
+ 	Finally, the Document object has a number of properties that can be used to access information about the page and its elements. The documentElement property can be used to access the root element of the page, while the querySelector() and querySelectorAll() properties can be used to access specific elements on the page.
+
+Explaining the Window object
+
+ 	The Window object is an essential part of web development and is used to control the browser window and its elements. It contains a set of methods and properties that can be used to open and close windows, resize and move them, as well as access the browser's history and location.
+
+ 	The Window object has a number of methods that can be used to open and close windows. The open() method can be used to open a new window, while the close() method can be used to close the current window. The resizeTo() and moveTo() methods can be used to resize and move the window, respectively.
+
+ 	The Window object also provides access to the browser's history and location. The history property can be used to access the browser's history, while the location property can be used to access the current URL. The back() and forward() methods can be used to move backwards and forward through the browser's history, respectively.
+
+ 	Finally, the Window object has a number of properties that can be used to access information about the window and its elements. The innerWidth and innerHeight properties can be used to access the width and height of the window, while the screenX and screenY properties can be used to access the coordinates of the window.
+
+Difference between document and window:
+
+Document																								Window
+
+It represents any HTML document or web page that is loaded in the browser.								It represents a browser window or frame that displays the contents of the webpage.
+
+It is loaded inside the window.														It is the very first object that is loaded in the browser.
+
+It is the object of window property.													It is the object of the browser.
+
+All the tags, elements with attributes in HTML are part of the document.								Global objects, functions, and variables of JavaScript are members of the window object.
+
+We can access the document from a window using the window. document									We can access the window from the window only. i.e. window.window
+
+The document is part of BOM (browser object model) and DOM (Document object model)							The window is part of BOM, not DOM.
+
+Properties of document objects such as title, body, cookies, etc can also be accessed by a window like this window. document.title	Properties of the window object cannot be accessed by the document object.
+
+syntax:																	syntax:
+																		
+document.propertyname;															window.propertyname;
+
+																		
+example:																example:
+
+document.title :  will return the title of the document											window.innerHeight : will return the height of the content area of the browser
+
+
+Conclusion
+
+ 	In conclusion, the Document and Window objects are two of the most important objects in HTML. They are essential to the development of web pages and are used to create and manipulate the content on the page. The Document object is used to create and manipulate the HTML elements that make up the page, while the Window object is used to control the browser window and its elements.
+ 	A different real-world example of using the document and window objects would be to create a web page that displays the current stock prices of a given company. The document object can be used to access information about the company, such as its name and symbol. The window object can then be used to open a new window with a chart of the stock prices, which can be used to display the current values.
+
+ 	By understanding the differences between these two objects, developers can create interactive and dynamic web pages. So if you're looking to get into web development, make sure to familiarize yourself with the Document and Window objects in HTML!
+
+ 	This article explored the differences between Document and Window objects in HTML and how they can be used to create and manipulate the content on the page. Hopefully, this article has given you a better understanding of the power of these objects and how they can be used to create dynamic web pages.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------

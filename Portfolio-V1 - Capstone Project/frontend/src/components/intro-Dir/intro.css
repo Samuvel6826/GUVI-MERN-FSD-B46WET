@@ -1,0 +1,79 @@
+#intro {
+  height: calc(100vh - 5rem);
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+  
+.bg {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.introContent {
+    height: 100vh;
+    width: 50vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: yellow;
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+    #intro {
+        height: calc(100vh - 5rem)
+      }
+    .bg {
+        left: -40vw;
+        top: -9vh;
+    }
+    .introText {
+        color: rgb(109, 193, 165);
+    }
+    .introContent {
+    padding-top: 6.5em;
+    width: 100vw;
+    }
+    .hello {
+    font-size: 8vw;
+    color: black;
+    }
+    .introPara {
+        font-size: large;
+    }
+    .btn {
+        margin: 1rem 0;
+        padding: 0.2rem 1rem;
+
+    }
+}

@@ -1,0 +1,187 @@
+.container{
+    height: 96vh;
+    border: 3px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        height: 150vh;
+        justify-content: center;
+    }
+}
+
+.event-1{
+    height: 75px;
+    display:inline; 
+    text-align: center;
+    font-size: x-large;
+}
+
+@media screen and (max-width: 600px) {
+    .event-1{
+        height: 50px;
+        font-size:large;
+    }
+}
+
+.event-2{
+    height: 75px;
+    display: inline;
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 3%;
+}
+
+@media screen and (max-width: 600px) {
+    .event-2{
+        height: 50px;
+        font-size: large;
+    }
+}
+
+.inside-container{
+    height: 65%;
+    width:95%;
+    padding: 1%;
+    box-sizing: border-box;
+    margin-left: 35px;
+    border:3px solid black ;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+    .inside-container{
+        height: 75%;
+        width:85%;
+        padding: 1%;
+        box-sizing: border-box;
+        border:3px solid black ;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.leftside{
+    height:100%;
+    width:35%;
+    display: flex;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .leftside{
+        height:35%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+
+.square{
+    height:225px;
+    width:225px;
+    position: absolute; right: 0px;top: 28px;
+    border:3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .square{
+    display: flex;
+    position: static;
+}
+    }
+
+.circle{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-right: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .right-side{
+        width:100%;
+        height:75%;
+        display: flex;
+    }
+    }
+
+.overallinputs{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label{
+ display: flex;
+ justify-content: end;
+}
+
+@media screen and (max-width: 600px) {
+    label{
+        justify-content: start;
+       }
+}
+
+.x{
+    height: 30px;
+    width: 70%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .x{
+        height: 30px;
+        width: 50%;
+        display: flex;
+        margin-bottom: 20px;
+    }
+}
+
+.y{
+  height: 30px;
+  width: 25%;
+  display: flex;
+  margin: 0 375px 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+   .y{
+  height: 30px;
+  width: 50%;
+  display: flex;
+  margin: 0 0px 20px 0;
+} 
+}
+
+input{
+  border: 3px solid black;
+}
+
+button{
+  font-size: larger;
+  font-weight: bolder;
+}

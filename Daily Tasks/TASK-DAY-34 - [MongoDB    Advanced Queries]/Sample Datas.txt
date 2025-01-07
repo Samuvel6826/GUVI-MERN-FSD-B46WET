@@ -1,0 +1,310 @@
+Database design for Zen class programme
+
+Collections:
+
+Users Collections:
+
+db.users_students.insertMany([
+  {
+    "user_id": 1,
+    "student_name": "Alice Smith",
+    "student_email": "alice@gmail.com",
+    "placement_appeared": true,
+    "task_id": 1,
+    "topic_id": 1,
+    "attendance_id": 1,
+    "drive_id": 1
+  },
+  {
+    "user_id": 2,
+    "student_name": "Bob Johnson",
+    "student_email": "bob@outlook.com",
+    "placement_appeared": false,
+    "task_id": 2,
+    "topic_id": 2,
+    "attendance_id": 2,
+    "drive_id": 2
+  },
+  {
+    "user_id": 3,
+    "student_name": "Charlie Brown",
+    "student_email": "charlie@yahoo.com",
+    "placement_appeared": true,
+    "task_id": 3,
+    "topic_id": 3,
+    "attendance_id": 3,
+    "drive_id": 3
+  },
+  {
+    "user_id": 4,
+    "student_name": "David Miller",
+    "student_email": "david@gmail.com",
+    "placement_appeared": false,
+    "task_id": 4,
+    "topic_id": 4,
+    "attendance_id": 4,
+    "drive_id": 4
+  },
+  {
+    "user_id": 5,
+    "student_name": "Eva Davis",
+    "student_email": "eva@yahoo.com",
+    "placement_appeared": true,
+    "task_id": 5,
+    "topic_id": 5,
+    "attendance_id": 5,
+    "drive_id": 5
+  }
+])
+
+
+
+
+
+Codekata Collections:
+
+db.codekata.insertMany([
+  {
+    "kata_id": 1,
+    "user_id": 1,
+    "problems_solved": 15,
+    "date_completed": ISODate("2020-10-10")
+  },
+  {
+    "kata_id": 2,
+    "user_id": 2,
+    "problems_solved": 20,
+    "date_completed": ISODate("2020-10-15")
+  },
+  {
+    "kata_id": 3,
+    "user_id": 3,
+    "problems_solved": 18,
+    "date_completed": ISODate("2020-10-20")
+  },
+  {
+    "kata_id": 4,
+    "user_id": 4,
+    "problems_solved": 22,
+    "date_completed": ISODate("2020-10-25")
+  },
+  {
+    "kata_id": 5,
+    "user_id": 5,
+    "problems_solved": 17,
+    "date_completed": ISODate("2020-10-30")
+  }
+])
+
+
+
+
+
+Attendance Collections:
+
+db.attendance.insertMany([
+  {
+    "attendance_id": 1,
+    "user_id": 1,
+    "drive_id": 1,
+    "onDate": "2020-10-20",
+    "status": "present"
+  },
+  {
+    "attendance_id": 2,
+    "user_id": 2,
+    "drive_id": 1,
+    "onDate": "2020-10-20",
+    "status": "absent"
+  },
+  {
+    "attendance_id": 3,
+    "user_id": 3,
+    "drive_id": 1,
+    "onDate": "2020-10-20",
+    "status": "present"
+  },
+  {
+    "attendance_id": 4,
+    "user_id": 4,
+    "drive_id": 1,
+    "onDate": "2020-10-20",
+    "status": "absent"
+  },
+  {
+    "attendance_id": 5,
+    "user_id": 5,
+    "drive_id": 1,
+    "onDate": "2020-10-20",
+    "status": "present"
+  }
+]);
+
+
+
+
+
+Topics Collections:
+
+db.topics.insertMany([
+  {
+    "topic_id": 1,
+    "topic_name": "JavaScript Fundamentals",
+    "scheduled_date": "2020-10-05",
+    "task_id": 1
+  },
+  {
+    "topic_id": 2,
+    "topic_name": "React.js Basics",
+    "scheduled_date": "2020-10-15",
+    "task_id": 2
+  },
+  {
+    "topic_id": 3,
+    "topic_name": "Node.js Essentials",
+    "scheduled_date": "2020-10-20",
+    "task_id": 3
+  },
+  {
+    "topic_id": 4,
+    "topic_name": "MongoDB Introduction",
+    "scheduled_date": "2020-10-25",
+    "task_id": 4
+  },
+  {
+    "topic_id": 5,
+    "topic_name": "Express.js Hands-On",
+    "scheduled_date": "2020-10-30",
+    "task_id": 5
+  }
+])
+
+
+
+
+
+Tasks Collections:
+
+db.tasks.insertMany([
+  {
+    "task_id": 1,
+    "user_id": 1,
+    "topic_id": 1,
+    "task_name": "Web Development Project",
+    "date": "2020-10-12",
+    "submission_status": "submitted"
+  },
+  {
+    "task_id": 2,
+    "user_id": 2,
+    "topic_id": 2,
+    "task_name": "Database Design Assignment",
+    "date": "2020-10-18",
+    "submission_status": "not submitted"
+  },
+  {
+    "task_id": 3,
+    "user_id": 3,
+    "topic_id": 3,
+    "task_name": "API Integration Task",
+    "date": "2020-10-22",
+    "submission_status": "submitted"
+  },
+  {
+    "task_id": 4,
+    "user_id": 4,
+    "topic_id": 4,
+    "task_name": "Responsive Web Design",
+    "date": "2020-10-27",
+    "submission_status": "not submitted"
+  },
+  {
+    "task_id": 5,
+    "user_id": 5,
+    "topic_id": 5,
+    "task_name": "Testing and Debugging",
+    "date": "2020-10-31",
+    "submission_status": "submitted"
+  }
+]);
+
+
+
+
+
+
+
+Company_drives Collections:
+
+db.company_drives.insertMany([
+  {
+    "drive_id": 1,
+    "drive_name": "Tata Tech Placement Drive",
+    "drive_date": "2020-10-20",
+    "placement_appeared": true
+  },
+  {
+    "drive_id": 2,
+    "drive_name": "Infosys Hiring Event",
+    "drive_date": "2020-11-05",
+    "placement_appeared": false
+  },
+  {
+    "drive_id": 3,
+    "drive_name": "Wipro CodeMaster Challenge",
+    "drive_date": "2020-10-25",
+    "placement_appeared": true
+  },
+  {
+    "drive_id": 4,
+    "drive_name": "Tech Mahindra Innovations",
+    "drive_date": "2020-10-30",
+    "placement_appeared": false
+  },
+  {
+    "drive_id": 5,
+    "drive_name": "HCL Tech Prospects",
+    "drive_date": "2020-10-15",
+    "placement_appeared": true
+  }
+])
+
+
+
+
+
+
+Mentors Collections:
+
+db.mentors.insertMany([
+  {
+    "mentor_id": 1,
+    "mentor_name": "Maxwell Frost",
+    "mentor_email": "maxwell.frost@gmail.com",
+    "mentee_count": 20
+  },
+  {
+    "mentor_id": 2,
+    "mentor_name": "Olivia Sterling",
+    "mentor_email": "olivia.sterling@outlook.com",
+    "mentee_count": 10
+  },
+  {
+    "mentor_id": 3,
+    "mentor_name": "Sebastian Blaze",
+    "mentor_email": "sebastian.blaze@yahoo.com",
+    "mentee_count": 25
+  },
+  {
+    "mentor_id": 4,
+    "mentor_name": "Isabella Storm",
+    "mentor_email": "isabella.storm@gmail.com",
+    "mentee_count": 18
+  },
+  {
+    "mentor_id": 5,
+    "mentor_name": "Xavier Thunder",
+    "mentor_email": "xavier.thunder@yahoo.com",
+    "mentee_count": 12
+  }
+])

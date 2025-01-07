@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-3-TASK</title>
+</head>
+
+<body style="padding: 2rem;">
+
+    <h1 style="text-align: center;">DAY-3-TASK</h1>
+
+    <h2 style="text-align: center;">Javascript - Day -3 : JS array & objects 01/04/2023</h2>
+
+    <br>
+
+    <h2>1. For the given JSON iterate over all for loops (for, for in, for of, forEach)</h2>
+
+    <script>
+
+        const req = new XMLHttpRequest()
+        req.addEventListener("load", reqFun)
+        //req.onload = (e)=>{
+        //     console.log(JSON.parse(e.srcElement.response))
+        // }
+        req.open("GET", "https://restcountries.com/v3.1/all")
+        req.send()
+
+        function generateName(countryName, capital, population) {
+            console.log(`${countryName}-${capital ? capital[0] : ""}-${population}`)
+        }
+
+        // Normal Function
+
+        function reqFun() {
+            let country = JSON.parse(this.responseText)
+            // console.log(country)
+
+            //for
+
+            console.log("For Loop");
+            console.log("\n");
+
+            for (let i = 0; i < country.length; i++) {
+                console.log(country[i].name.common)
+            }
+
+            //for in
+
+            console.log("\n");
+            console.log("For in Loop");
+            console.log("\n");
+
+            for (let i in country) {
+                console.log(country[i].name.common)
+            }
+
+            //for of
+
+            console.log("\n");
+            console.log("For of Loop");
+            console.log("\n");
+
+
+            for (i of country) {
+                console.log(i.name.common)
+            }
+
+            //forEach with arrow
+
+            console.log("\n");
+            console.log("forEach with Arrow Function");
+            console.log("\n");
+
+            country.forEach((e) => {
+                console.log(e.name.common)
+            })
+
+            //forEach with Normal Function
+
+            console.log("\n");
+            console.log("forEach with Normal Function");
+            console.log("\n");
+
+            country.forEach(function getCapital(e) {
+                console.log(e.capital)
+            })
+        }
+
+    </script>
+
+    <h2>2. Create your own resume data in JSON format</h2>
+    <h3>Open Console to see the result</h3>
+
+    <script>
+
+        console.log("Own resume data in JSON format\n\nBasics\n\nName      : Samuvel A\nEmail     : samuvel6826@gmail.com\nPhone     : 90432-51797\nLanguages : Tamil, English\nWebsite   : https://contactme.my.canva.site/sam\n\nObjective : I am looking for a position in a progressive organization where my track record and interpersonal skills would add value to the organization and in return offers opportunities for advancement in my career growth.\n\nLocation\n\nAddress      : LEON NAGAR, COLACHEL, RITAPURAM POST, KANYAKUMARI DIST\nPostal Code  : 629 159\nCity         : NAGERCOIL\nCountryCode  : +91\nRegion       : TAMILNADU\n\nEducational Qualification\n\nSSLC         : Christian Matriculation Higher Secondary School, Kallukkoottam (81/100) - 2019\nHSC          : Mother Theresa Higher Secondary School, Mayilode (85/100) – 2021\n\nProfiles\n\nlinkedIn     : www.linkedin.com/in/samuvel-a-7263b925a\nGitHub       : https://github.com/Samuvel6826\nTwitter      : https://twitter.com/samuvel6826\nInstagram    : https://www.instagram.com/mr_fun_factory_24/\n\nHobbies\n\nSwimming, Playing Volley Ball, Technology-Related Internet Surfing, Social Media.");
+
+    </script>
+
+</body>
+
+</html>
